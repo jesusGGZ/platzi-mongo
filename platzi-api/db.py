@@ -6,8 +6,8 @@ from werkzeug.local import LocalProxy
 
 # Este método se encarga de configurar la conexión con la base de datos
 def get_db():
-    platzi_db = current_app.config['PLATZI_DB_URI']
-    client = MongoClient(platzi_db)
+    #platzi_db = current_app.config['PLATZI_DB_URI']
+    client = MongoClient('mongodb+srv://jesus:jesus123@cluster0.hgjmo.mongodb.net/platzi?retryWrites=true&w=majority')
     return client.platzi
 
 
@@ -26,20 +26,21 @@ def collection_stats(collection_nombre):
 
 
 def crear_carrera(json):
-    return str('Falta por implementar')
+    return str(db.carreras.insert_one(json).inserted_id)
 
 
 def consultar_carrera_por_id(carrera_id):
-    return str('Falta por implementar')
+    return dumps(db.carreras.find_one({'_id': ObjectId(carrera_id)}))
 
 
 def actualizar_carrera(carrera):
     # Esta funcion solamente actualiza nombre y descripcion de la carrera
-    return str('Falta por implementar')
+    return str(db.carreras.update_one({'_id': ObjectId(carrera)},
+    {'set': {'nombre': carrera['nombre'], 'descripcion': carrera['carrera']}}).modified_count)
 
 
 def borrar_carrera_por_id(carrera_id):
-    return str('Falta por implementar')
+    return str(db.carreras.delete_one({'_id': ObjectId(carrera_id)}))
 
 
 # Clase de operadores
