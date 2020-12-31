@@ -1,0 +1,49 @@
+{
+	"nombre": "AWS Avanzado",
+	"descripcion": "Curso de MongoDB",
+	"clases": [
+			{
+				"orden"	:	1,
+				"nombre": "Clase 1",
+				"descripcion": "Descripción de la clase 1",
+				"video": "https://video.video"
+			},
+			{
+				"orden"	:	2,
+				"nombre": "Clase 2",
+				"descripcion": "Descripción de la clase 2",
+				"video": "https://video.video"
+			},
+			{
+				"orden"	:	3,
+				"nombre": "Clase 3",
+				"descripcion": "Descripción de la clase 3",
+				"video": "https://video.video"
+			},
+			{
+				"orden"	:	4,
+				"nombre": "Clase 4",
+				"descripcion": "Descripción de la clase 4",
+				"video": "https://video.video"
+			},
+			{
+				"orden"	:	5,
+				"nombre": "Clase 2",
+				"descripcion": "Descripción de la clase 2",
+				"video": "https://video.video"
+			},
+			{
+				"orden"	:	6,
+				"nombre": "Clase 3",
+				"descripcion": "Descripción de la clase 3",
+				"video": "https://video.video"
+			},
+			{
+				"orden"	:	7,
+				"nombre": "Clase 4",
+				"descripcion": "Descripción de la clase 4",
+				"video": "https://video.video"
+			}
+		
+		]
+}

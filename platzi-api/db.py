@@ -7,7 +7,9 @@ from werkzeug.local import LocalProxy
 # Este método se encarga de configurar la conexión con la base de datos
 def get_db():
     #platzi_db = current_app.config['PLATZI_DB_URI']
-    client = MongoClient('mongodb+srv://jesus:jesus123@cluster0.hgjmo.mongodb.net/platzi?retryWrites=true&w=majority')
+    #client = MongoClient('mongodb+srv://jesus:jesus123@cluster0.hgjmo.mongodb.net/platzi?retryWrites=true&w=majority')
+    platzi_db = current_app.config['PLATZI_DB_URI']
+    client = MongoClient(platzi_db)
     return client.platzi
 
 
