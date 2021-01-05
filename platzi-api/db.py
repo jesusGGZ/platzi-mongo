@@ -3,7 +3,6 @@ from flask import current_app
 from pymongo import MongoClient, DESCENDING
 from werkzeug.local import LocalProxy
 
-
 # Este método se encarga de configurar la conexión con la base de datos
 def get_db():
     #platzi_db = current_app.config['PLATZI_DB_URI']
@@ -83,5 +82,5 @@ def consultar_curso_por_id_proyeccion(id_curso, proyeccion=None):
 
 
 def consultar_curso_por_nombre(nombre):
-    return str('Falta por implementar')
+    return dumps(db.cursos.find({'text': {'search': nombre}}))
 

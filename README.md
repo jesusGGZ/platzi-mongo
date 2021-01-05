@@ -36,6 +36,10 @@ Asegurate de reemplazar el valor de PLATZI_DB_URI por la URI de tu cluster en Mo
 export FLASK_APP=platzi-api
 export FLASK_ENV=development 
 export PLATZI_DB_URI="MONGO-URI"
+
+$env:FLASK_APP = “platzi-api”
+$env:FLASK_ENV = “development”
+$env:PLATZI_DB_URI = "mongodb+srv://:@cluster0.hgjmo.mongodb.net/platzi?retryWrites=true&w=majority"
 ```
 
 ## Iniciar el servidor de platzi-mongo
